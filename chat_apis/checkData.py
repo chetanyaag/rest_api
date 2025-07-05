@@ -61,7 +61,6 @@ def addAdditionalData(data):
         whats_app_mobile_number = data.get('whats_app_mobile_number')
         if str(whats_app_mobile_number).isnumeric():
             if str(whats_app_mobile_number) != str(employee['whats_app_mobile_number'])  and len(str(whats_app_mobile_number))==10:
-                # print(whats_app_mobile_number)
                 (employee_table.update_one({"employee_code":str(employee_code)},{"$set":{"whats_app_mobile_number":int(whats_app_mobile_number)}}))
 
     

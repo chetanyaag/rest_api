@@ -179,14 +179,14 @@ def returnStatus(emp_code, month, year):
     try:
         df = pd.read_excel('status.xlsx')
         filtered_rows = df[df['emp_code'] == int(emp_code)]
-        print(filtered_rows)
+        # print(filtered_rows)
         date = list(filtered_rows['Month'])[0]
         if (int(month)== int(date.month)) and (int(year) ==int(date.year)):
             return list(filtered_rows['Status'])[0]
         else:
             return "Data is not available "
     except Exception as e:
-        print(e)
+        # print(e)
         return "Data is not available "
 
 
