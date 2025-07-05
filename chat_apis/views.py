@@ -49,7 +49,6 @@ class Webhook(APIView):
             else:
                 return HttpResponse(400)
         except Exception as e:
-            raise e
             return HttpResponse(400)
 
 
@@ -69,7 +68,6 @@ class WebhookChatBot1(APIView):
 
     def post(self, request):
         data = request.data
-        print(data)
         try:
             if data:
                 changes = data['entry'][0]['changes'][0]
@@ -81,16 +79,18 @@ class WebhookChatBot1(APIView):
                     message_text = message['text']['body']
                     wa_id = value['contacts'][0]['wa_id']
                     # return_message = "Please message on +91 78199 76989 to know your TADA."
+                    print(f"number : {number},  message: {message_text}")
                     return_message = conversationTwo(number, message_text)
+                    print(f"return Message  : {return_message}")
                     send_messageChatBot(number, return_message)
+                    print("Message processed")
                     return HttpResponse(return_message)
-                print("success")
                 return HttpResponse(200)
             else:
                 print("failed")
                 return HttpResponse(400)
         except Exception as e:
-            print(e)
+            raise e
             return HttpResponse(400)
 
 
