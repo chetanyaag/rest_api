@@ -67,6 +67,7 @@ class WebhookChatBot1(APIView):
 
     def post(self, request):
         data = request.data
+        print(data)
         try:
             if data:
                 changes = data['entry'][0]['changes'][0]
@@ -89,7 +90,7 @@ class WebhookChatBot1(APIView):
                 print("failed")
                 return HttpResponse(400)
         except Exception as e:
-            raise e
+            print(e)
             return HttpResponse(400)
 
 
