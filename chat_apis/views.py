@@ -49,6 +49,7 @@ class Webhook(APIView):
             else:
                 return HttpResponse(400)
         except Exception as e:
+            raise e
             return HttpResponse(400)
 
 
