@@ -366,11 +366,14 @@ def conversation(number , message_text):
 
 def send_messageChatBot(number, message):
     # url = "https://graph.facebook.com/v14.0/103634132488392/messages"
-    url = "https://graph.facebook.com/v14.0/101557519384729/messages"   #//chatbot1
+    # url = "https://graph.facebook.com/v14.0/101557519384729/messages"   #//chatbot1/
+    url = "https://graph.facebook.com/v22.0/720670554459558/messages"
     
     # url = url = "https://graph.facebook.com/v15.0/108172375434231/messages"  #//DFIL
     # CHATBOT1
-    headers = {"Authorization":"Bearer EAAFmaRWPBNMBAL6I8VIIAw8tYbjOPXfJR7FcpiykHHTYa1LnaZBHlbf64ZAW1kC9GEAA0yJ1i9gDysNdqZC6AVQABL2gEi8x0ImrkvSNP6O43MZBV9zwLEJzJAZAbA6V5ji6wNmyGjkwgC6tBiht43ZASllI8mgWvax5ZB9gwpT2XZA8ewDXkB1ZBCbWN1V0xvw9CB6SpynzXxQZDZD"}
+    # headers = {"Authorization":"Bearer EAAFmaRWPBNMBAL6I8VIIAw8tYbjOPXfJR7FcpiykHHTYa1LnaZBHlbf64ZAW1kC9GEAA0yJ1i9gDysNdqZC6AVQABL2gEi8x0ImrkvSNP6O43MZBV9zwLEJzJAZAbA6V5ji6wNmyGjkwgC6tBiht43ZASllI8mgWvax5ZB9gwpT2XZA8ewDXkB1ZBCbWN1V0xvw9CB6SpynzXxQZDZD"}
+    headers = {"Authorization":"Bearer EAAV8SyWjArUBPLfVZCHJ1hZCJNcMXT7MI1CoqMtQe6od9a0UmgrVUo0iK8PI2SJ3aOmMtSQY1XYstP3F1nJM833uutbruvJ1iWBThAOlnbZAg9JgqjnBsmcn09vB3BiWOf7HbS5BcjDyHc9RLsVzSv0vZAEYZAbC3LQTotgMc83HOFy28apSCZC5JwUSH0iPVqNQZDZD"}
+
    #DFIL
     # headers = {"Authorization":"Bearer EAAJewjaI2kMBAE6b9KyHhTvqRWPM29pZCDq2AShjWuyl4UWKwOWE3IuJZBSQgRIYGeDBS66En93hNfjduPUg73ta3NOCZCWXQ3WLtr1TZBeWZCaH8vB0NUQSBtDE0XmZCVFtAM05EXLqLkSc404cnALZAjOw7kG9Ne4Tc9ZBOVYyx8N6DZAGnvZBpw"}
     headers['Content-Type'] = "application/json"

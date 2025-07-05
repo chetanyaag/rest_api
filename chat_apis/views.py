@@ -80,7 +80,8 @@ class WebhookChatBot1(APIView):
                     wa_id = value['contacts'][0]['wa_id']
                     # return_message = "Please message on +91 78199 76989 to know your TADA."
                     print(f"number : {number},  message: {message_text}")
-                    return_message = conversationTwo(number, message_text)
+                    # return_message = conversationTwo(number, message_text)
+                    return_message = "Hi! message sent sucessfull"
                     print(f"return Message  : {return_message}")
                     send_messageChatBot(number, return_message)
                     print("Message processed")
